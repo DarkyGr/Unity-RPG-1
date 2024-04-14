@@ -1,4 +1,4 @@
 # Unity - RPG - 1
 
-This applcation was made with:
+This game was made with:
 - Unity 2022 
