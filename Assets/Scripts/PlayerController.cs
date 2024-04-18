@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
         var collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
         if (collider != null)
-            Debug.Log("There is an NCP!");
+            collider.GetComponent<Interactable>()?.Interact();
     }
 
     IEnumerator Move(Vector3 targetPos)
