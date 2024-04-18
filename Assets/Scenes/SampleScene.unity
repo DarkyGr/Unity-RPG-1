@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 764355343}
   - component: {fileID: 764355342}
   - component: {fileID: 764355341}
+  - component: {fileID: 764355345}
   m_Layer: 8
   m_Name: Challanger
   m_TagString: Untagged
@@ -373,6 +374,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764355345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764355340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91dc6ace656b7e478b7fc68981c59fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1015706420
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +398,7 @@ GameObject:
   - component: {fileID: 1015706421}
   - component: {fileID: 1015706424}
   - component: {fileID: 1015706423}
+  - component: {fileID: 1015706425}
   m_Layer: 8
   m_Name: Arturito
   m_TagString: Untagged
@@ -531,6 +545,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1015706425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015706420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f7c4dd9d0d39f49aff884b84033750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1033202243
 GameObject:
   m_ObjectHideFlags: 0
