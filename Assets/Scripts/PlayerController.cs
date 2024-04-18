@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
-            Debug.Log("This is input.x: " + input.x);
-            Debug.Log("This is input.y: " + input.y);
+            //Debug.Log("This is input.x: " + input.x);
+            //Debug.Log("This is input.y: " + input.y);
 
             if (input.x != 0) input.y = 0;
 
@@ -49,11 +49,16 @@ public class PlayerController : MonoBehaviour
             Interact();
     }
 
-    void Interact() {
+    void Interact()
+    {
         var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         var interactPos = transform.position + facingDir;
 
-        Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
+        //Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
+
+        var collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
+        if (collider != null)
+            Debug.Log("There is an NCP!");
     }
 
     IEnumerator Move(Vector3 targetPos)
