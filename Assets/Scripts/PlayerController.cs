@@ -89,7 +89,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, 0.1f, battleZoneLayer) != null)
         {
-            Debug.Log("The ballte started!");
+            if (Random.Range(1, 100) <= 50)
+                Debug.Log("The ballte started!");
         }
     }
 }
