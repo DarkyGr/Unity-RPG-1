@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public LayerMask solidObjectsLayer;
     public LayerMask interactableLayer;
+    public LayerMask battleZoneLayer;
 
     private void Awake()
     {
@@ -72,6 +73,8 @@ public class PlayerController : MonoBehaviour
 
         transform.position = targetPos;
         isMoving = false;
+
+        CheckForEncounters();
     }
 
     private bool IsWalkable(Vector3 targetPos)
@@ -80,5 +83,13 @@ public class PlayerController : MonoBehaviour
             return false;
 
         return true;
+    }
+
+    private void CheckForEncounters()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.1f, battleZoneLayer) != null)
+        {
+            Debug.Log("The ballte started!");
+        }
     }
 }
